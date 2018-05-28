@@ -174,6 +174,11 @@ h3{
 .button:hover{
   background-color: #e33000;
 }
+ul{
+  list-style: none; /*quito el puntito de delante*/
+  margin: 0;
+  padding: 0;
+}
 .float-right{
   float: right;
 }
@@ -411,9 +416,54 @@ div.detalle-servicio p {
   font-size: 20px;
 }
 
-
-
-
+/*conductores/taxis*/
+ul.lista-conductores li{
+  padding: 10px;
+  float: left;
+}
+@media only screen and (min-width: 480px){
+  ul.lista-conductores li{
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px){
+  ul.lista-conductores li{
+    width: 33.3%;
+  }
+}
+div.conductor{
+  position: relative;
+  overflow: hidden;
+}
+div.conductor img{
+  max-width: 100%;
+  filter: gray();/*en lugar de hacer dos imagenes y esconder una cuando hover, lo hago por css*/
+  -webkit-filter: grayscale(1); /*prefijo, en un navegador que use webkit le agrega estilos y funcionalidades especificas para ese navegador*/
+  -webkit-transition: all .5s ease-in-out;
+}
+div.conductor img:hover{
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+  /*transform: rotate(3deg);*/
+}
+div.conductor p{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px;
+  margin: 0;
+  background-color: rgba(0,0,0,0.55);
+  width: 100%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  color: #fe4918;
+  text-transform: uppercase;
+  -webkit-transition: all .5s ease-in-out;
+}
+div.conductor:hover p{ /*el hover antes del p, ojo, para que el afectado sea el parrafo y no el img*/
+  bottom: -80px;
+  opacity: 0;
+}
 
 
 /* ==========================================================================
