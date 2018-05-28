@@ -465,6 +465,55 @@ div.conductor:hover p{ /*el hover antes del p, ojo, para que el afectado sea el 
   opacity: 0;
 }
 
+/*contador*/
+.parallax::before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(.8);/*como están los números como relative, esto no les afecta, sólo al fondo, y así se ven mejor*/
+  filter:brightness(.8);
+}
+div.contador{
+  position: relative;
+  height: auto;
+}
+div.contador::before{
+  background-image: url("../img/bg-resumen.jpg");
+  content: '';/*siempre que utilizamos before o after no olvidar el content*/
+}
+ul.resumen-servicio{
+  position: relative;/*para resetear el absolute*/
+  padding: 120px 0;
+}
+ul.resumen-servicio li{
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+@media only screen and (min-width: 768px){
+  ul.resumen-servicio li{
+    width: 25%;
+  }
+}
+p.numero{
+  color: #fe4918;
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+
+
 
 /* ==========================================================================
    Helper classes
