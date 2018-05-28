@@ -1,0 +1,296 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet"><!--traigo algunas fuentes de google fonts-->
+
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<header class="site-header">
+  <div class="hero">
+    <div class="contenido-header">
+      <nav class="redes-sociales">
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </nav>
+      <div class="informacion-ruta">
+        <div class="clearfix">
+          <p class="fecha"><i class="fa fa-calendar" aria-hidden="true"></i> 10-12 Dic</p>
+          <p class="ciudad"><i class="fa fa-map-marker" aria-hidden="true"></i> Barcelona, CAT</p>
+        </div>
+        <h1 class="nombre-sitio">BCN Taxi Tour</h1>
+        <p class="slogan">La mejor ruta de <span> Barcelona</span></p>
+      </div> <!--.informacion-ruta-->
+    </div>
+  </div><!--.hero-->
+</header>
+
+<div class="barra"> <!--barra de menú debajo-->
+  <div class="contenedor clearfix">
+    <div class="logo">
+      <img src="img/logo.svg" alt="logo BCN taxi tour"><!-- cambiar -->
+    </div>
+    <div class="menu-movil">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navegacion-principal clearfix">
+      <a href="#">Ruta/evento</a><!-- cambiar -->
+      <a href="#">Calendario</a>
+      <a href="#">Taxistas/taxis</a>
+      <a href="registro.html">Reservas</a>
+    </nav>
+  </div>
+</div><!--.barra de menú debajo-->
+
+<section class="seccion contenedor">
+  <h2>Registro de usuarios</h2>
+  <form id="registro" class="registro" action="" method="post">
+    <div id="datos_usuario" class="registro caja clearfix">
+      <div class="campo">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+      </div>
+      <div class="campo">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
+      </div>
+      <div class="campo">
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email" placeholder="Tu e-mail">
+      </div>
+      <div id="error"></div>
+    </div><!--.#datos_usuario-->
+
+    <div id="paquetes" class="paquetes">
+      <h3>Escoge el número de servicios a contratar</h3>
+      <ul class="lista-precios clearfix">
+        <li>
+          <div class="tabla-precio">
+            <h3>Día completo</h3>
+            <p class="numero">200€</p>
+            <ul>
+              <li>Incluye bla bla bla</li>
+              <li>Todas las rutas</li>
+              <li>Traslados incluídos</li>
+            </ul>
+            <div class="orden">
+              <label for="dia_completo">Contratar:</label>
+              <input type="number" min="0" id="dia_completo" size="3" placeholder="0">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="tabla-precio">
+            <h3>Traslado Aeropuerto</h3>
+            <p class="numero">30€</p>
+            <ul>
+              <li>Incluye bla bla bla</li>
+              <li>Desde/hasta Barcelona Ciudad</li>
+              <li>Equipaje incluído</li>
+            </ul>
+            <div class="orden">
+              <label for="traslados">Traslados:</label>
+              <input type="number" min="0" id="traslados" size="3" placeholder="0">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="tabla-precio">
+            <h3>Ruta Eixample</h3>
+            <p class="numero">50€</p>
+            <ul>
+              <li>Incluye bla bla bla</li>
+              <li>Recogida en hotel</li>
+              <li>Sin esperas</li>
+            </ul>
+            <div class="orden">
+              <label for="rutas">Rutas:</label>
+              <input type="number" min="0" id="rutas" size="3" placeholder="0">
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div><!--.paquetes-->
+
+    <div id="eventos" class="eventos clearfix">
+      <h3>Elige tus rutas para el día completo</h3>
+      <div class="caja">
+        <div id="viernes" class="contenido-dia clearfix">
+          <h4>Día</h4> <!--cambiar-->
+          <div>
+            <p>Ruta Gaudí:</p>
+            <label><input type="checkbox" name="registro[]" id="gaudi_01" value="gaudi_01"><time>10:00</time> Sagrada Familia</label>
+            <label><input type="checkbox" name="registro[]" id="gaudi_02" value="gaudi_02"><time>12:00</time> Hospital Sant Pau</label>
+            <label><input type="checkbox" name="registro[]" id="gaudi_03" value="gaudi_03"><time>14:00</time> Parc Güell</label>
+            <label><input type="checkbox" name="registro[]" id="gaudi_04" value="gaudi_04"><time>17:00</time> Casa Batllò</label>
+            <label><input type="checkbox" name="registro[]" id="gaudi_05" value="gaudi_05"><time>19:00</time> La Pedrera</label>
+          </div>
+          <div>
+            <p>Ruta Montjuïc:</p>
+            <label><input type="checkbox" name="registro[]" id="montjuic_01" value="montjuic_01"><time>10:00</time> Funicular</label>
+            <label><input type="checkbox" name="registro[]" id="montjuic_02" value="montjuic_02"><time>17:00</time> Fira Barcelona</label>
+            <label><input type="checkbox" name="registro[]" id="montjuic_03" value="montjuic_03"><time>19:00</time> Plaça Espanya</label>
+          </div>
+          <div>
+            <p>Ruta Tibidabo:</p>
+            <label><input type="checkbox" name="registro[]" id="tibidabo_01" value="tibidabo_01"><time>10:00</time> Parc Tibidabo</label>
+          </div>
+        </div> <!--#viernes-->
+        <div id="sabado" class="contenido-dia clearfix">
+          <h4>Sábado</h4>
+          <div>
+            <p>Ruta de compras:</p>
+            <label><input type="checkbox" name="registro[]" id="compras_06" value="compras_06"><time>10:00</time> tienda1</label>
+            <label><input type="checkbox" name="registro[]" id="compras_07" value="compras_07"><time>12:00</time> tienda2</label>
+            <label><input type="checkbox" name="registro[]" id="compras_08" value="compras_08"><time>14:00</time> restaurante</label>
+            <label><input type="checkbox" name="registro[]" id="compras_09" value="compras_09"><time>17:00</time> tienda3</label>
+            <label><input type="checkbox" name="registro[]" id="compras_10" value="compras_10"><time>19:00</time> Centro comercial</label>
+            <label><input type="checkbox" name="registro[]" id="compras_11" value="compras_11"><time>21:00</time> restaurante2</label>
+          </div>
+          <div>
+            <p>Ruta Born:</p>
+            <label><input type="checkbox" name="registro[]" id="born_04" value="born_04"><time>10:00</time> Barri del Born</label>
+            <label><input type="checkbox" name="registro[]" id="born_05" value="born_05"><time>17:00</time> Parc de la Ciutadella</label>
+            <label><input type="checkbox" name="registro[]" id="born_06" value="born_06"><time>19:00</time> Arc de Triomf</label>
+          </div>
+          <div>
+            <p>Ruta centro:</p>
+            <label><input type="checkbox" name="registro[]" id="centro_02" value="centro_02"><time>10:00</time> Plaça Catalunya</label>
+            <label><input type="checkbox" name="registro[]" id="centro_03" value="centro_03"><time>17:00</time> Rambla Catalunya</label>
+          </div>
+        </div> <!--#sabado-->
+        <div id="domingo" class="contenido-dia clearfix">
+          <h4>Domingo</h4>
+          <div>
+            <p>Ruta a:</p>
+            <label><input type="checkbox" name="registro[]" id="rutaa_12" value="rutaa_12"><time>10:00</time> sitio1</label>
+            <label><input type="checkbox" name="registro[]" id="rutaa_13" value="rutaa_13"><time>12:00</time> sitio2</label>
+            <label><input type="checkbox" name="registro[]" id="rutaa_14" value="rutaa_14"><time>14:00</time> sitio3</label>
+            <label><input type="checkbox" name="registro[]" id="rutaa_15" value="rutaa_15"><time>17:00</time> sitio4</label>
+            <label><input type="checkbox" name="registro[]" id="rutaa_16" value="rutaa_16"><time>19:00</time> sitio5</label>
+          </div>
+          <div>
+            <p>Ruta b:</p>
+            <label><input type="checkbox" name="registro[]" id="rutab_07" value="rutab_07"><time>10:00</time> sitio6</label>
+            <label><input type="checkbox" name="registro[]" id="rutab_08" value="rutab_08"><time>17:00</time> sitio7</label>
+            <label><input type="checkbox" name="registro[]" id="rutab_09" value="rutab_09"><time>19:00</time> sitio8</label>
+          </div>
+          <div>
+            <p>Ruta c:</p>
+            <label><input type="checkbox" name="registro[]" id="rutac_04" value="rutac_04"><time>14:00</time> sitio9</label>
+            <label><input type="checkbox" name="registro[]" id="rutac_05" value="rutac_05"><time>17:00</time> sitio10</label>
+          </div>
+        </div> <!--#domingo-->
+      </div><!--.caja-->
+    </div> <!--#eventos-->
+
+    <div id="resumen" class="resumen">
+      <h3>Pago y Extras</h3>
+      <div class="caja clearfix">
+        <div class="extras">
+          <div class="orden">
+            <label for="entrada_sagrada">Entrada a la Sagrada Familia 12€ <small>(promocion 7% descuento)</small></label>
+            <input type="number" min="0" id="entrada_sagrada" size="3" placeholder="0">
+          </div><!--.orden-->
+          <div class="orden">
+            <label for="entrada_guell">Entrada al Parc Güell 10€ <small>(Recinto)</small></label>
+            <input type="number" min="0" id="entrada_guell" size="3" placeholder="0">
+          </div><!--.orden-->
+          <div class="orden">
+            <label for="regalo">Selecciona un regalo</label><br>
+            <select id="regalo" required>
+              <option value="">- Seleccione un regalo --</option>
+              <option value="guia_bcn">Guia de Barcelona</option>
+              <option value="mapa_bcn">Mapa de Barcelona</option>
+              <option value="wifi">Wifi Gratis</option>
+            </select>
+          </div><!--.orden-->
+          <input type="button" id="calcular" class="button" value="calcular">
+        </div><!--.extras-->
+        <div class="total">
+          <p>Resumen:</p>
+          <div id="lista-productos">
+
+          </div>
+          <p>Total:</p>
+          <div id="suma-total">
+
+          </div>
+          <input id="btnRegistro" type="submit" class="button" value="Pagar">
+        </div><!--.total-->
+      </div><!--.caja-->
+    </div><!--.resumen-->
+
+  </form>
+</section>
+
+<footer class="site-footer">
+  <div class="contenedor clearfix">
+    <div class="footer-informacion">
+      <h3>Sobre <span>BCN Taxi Tour</span></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget tempor libero. Praesent ut ullamcorper nisl. Morbi fringilla volutpat felis in mattis. Donec egestas augue risus, in mollis dui dictum eget.</p>
+    </div>
+    <div class="ultimos-tweets">
+      <h3>Últimos <span>tweets</span></h3>
+      <ul>
+        <li>ojhdfk jhdswfhwio edh onoiwdhfoi nuoifgh nwofh uowh hweofghn jlkhusdoih fjklshdfin jwhf jlnbdoefh ljndsif hwlkjef whfh</li>
+        <li>ojhdfk jhdswfhwio edh onoiwdhfoi nuoifgh nwofh uowh hweofghn jlkhusdoih fjklshdfin jwhf jlnbdoefh ljndsif hwlkjef whfh</li>
+        <li>ojhdfk jhdswfhwio edh onoiwdhfoi nuoifgh nwofh uowh hweofghn jlkhusdoih fjklshdfin jwhf jlnbdoefh ljndsif hwlkjef whfh</li>
+      </ul>
+    </div>
+    <div class="menu">
+      <h3>Redes <span>sociales</span></h3>
+      <nav class="redes-sociales">
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </nav>
+    </div>
+  </div>
+  <p class="copyright">Todos los derechos reservados - BCN Taxi Tour 2018</p>
+</footer>
+
+
+
+<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
