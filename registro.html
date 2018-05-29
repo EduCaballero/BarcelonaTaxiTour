@@ -93,7 +93,7 @@
             <h3>Día completo</h3>
             <p class="numero">200€</p>
             <ul>
-              <li>Incluye bla bla bla</li>
+              <li>12h a tu entera disposición</li>
               <li>Todas las rutas</li>
               <li>Traslados incluídos</li>
             </ul>
@@ -105,10 +105,10 @@
         </li>
         <li>
           <div class="tabla-precio">
-            <h3>Traslado Aeropuerto</h3>
+            <h3>Traslados</h3>
             <p class="numero">30€</p>
             <ul>
-              <li>Incluye bla bla bla</li>
+              <li>Aeropuerto y Cruceros</li>
               <li>Desde/hasta Barcelona Ciudad</li>
               <li>Equipaje incluído</li>
             </ul>
@@ -120,10 +120,10 @@
         </li>
         <li>
           <div class="tabla-precio">
-            <h3>Ruta Eixample</h3>
+            <h3>Rutas por Barcelona</h3>
             <p class="numero">50€</p>
             <ul>
-              <li>Incluye bla bla bla</li>
+              <li>Sagrada Familia, Parc Guëll...</li>
               <li>Recogida en hotel</li>
               <li>Sin esperas</li>
             </ul>
@@ -137,10 +137,10 @@
     </div><!--.paquetes-->
 
     <div id="eventos" class="eventos clearfix">
-      <h3>Elige tus rutas para el día completo</h3>
+      <h3>Selecciona entre los servicios disponibles</h3>
       <div class="caja">
-        <div id="viernes" class="contenido-dia clearfix">
-          <h4>Día</h4> <!--cambiar-->
+        <div id="seleccion-ruta" class="contenido-dia clearfix">
+          <h4>Rutas</h4> <!--cambiar-->
           <div>
             <p>Ruta Gaudí:</p>
             <label><input type="checkbox" name="registro[]" id="gaudi_01" value="gaudi_01"><time>10:00</time> Sagrada Familia</label>
@@ -155,35 +155,51 @@
             <label><input type="checkbox" name="registro[]" id="montjuic_02" value="montjuic_02"><time>17:00</time> Fira Barcelona</label>
             <label><input type="checkbox" name="registro[]" id="montjuic_03" value="montjuic_03"><time>19:00</time> Plaça Espanya</label>
           </div>
-          <div>
+          <!--<div>
             <p>Ruta Tibidabo:</p>
             <label><input type="checkbox" name="registro[]" id="tibidabo_01" value="tibidabo_01"><time>10:00</time> Parc Tibidabo</label>
-          </div>
-        </div> <!--#viernes-->
-        <div id="sabado" class="contenido-dia clearfix">
-          <h4>Sábado</h4>
+          </div>-->
           <div>
             <p>Ruta de compras:</p>
-            <label><input type="checkbox" name="registro[]" id="compras_06" value="compras_06"><time>10:00</time> tienda1</label>
-            <label><input type="checkbox" name="registro[]" id="compras_07" value="compras_07"><time>12:00</time> tienda2</label>
-            <label><input type="checkbox" name="registro[]" id="compras_08" value="compras_08"><time>14:00</time> restaurante</label>
-            <label><input type="checkbox" name="registro[]" id="compras_09" value="compras_09"><time>17:00</time> tienda3</label>
-            <label><input type="checkbox" name="registro[]" id="compras_10" value="compras_10"><time>19:00</time> Centro comercial</label>
-            <label><input type="checkbox" name="registro[]" id="compras_11" value="compras_11"><time>21:00</time> restaurante2</label>
+            <label><input type="checkbox" name="registro[]" id="compras_01" value="compras_01"><time>10:00</time> tienda1</label>
+            <label><input type="checkbox" name="registro[]" id="compras_02" value="compras_02"><time>12:00</time> tienda2</label>
+            <label><input type="checkbox" name="registro[]" id="compras_03" value="compras_03"><time>14:00</time> restaurante</label>
+            <label><input type="checkbox" name="registro[]" id="compras_04" value="compras_04"><time>17:00</time> tienda3</label>
+            <label><input type="checkbox" name="registro[]" id="compras_05" value="compras_05"><time>19:00</time> Centro comercial</label>
+            <label><input type="checkbox" name="registro[]" id="compras_06" value="compras_06"><time>21:00</time> restaurante2</label>
           </div>
-          <div>
+          <!--<div>
             <p>Ruta Born:</p>
-            <label><input type="checkbox" name="registro[]" id="born_04" value="born_04"><time>10:00</time> Barri del Born</label>
-            <label><input type="checkbox" name="registro[]" id="born_05" value="born_05"><time>17:00</time> Parc de la Ciutadella</label>
-            <label><input type="checkbox" name="registro[]" id="born_06" value="born_06"><time>19:00</time> Arc de Triomf</label>
+            <label><input type="checkbox" name="registro[]" id="born_01" value="born_01"><time>10:00</time> Barri del Born</label>
+            <label><input type="checkbox" name="registro[]" id="born_02" value="born_02"><time>17:00</time> Parc de la Ciutadella</label>
+            <label><input type="checkbox" name="registro[]" id="born_03" value="born_03"><time>19:00</time> Arc de Triomf</label>
           </div>
           <div>
             <p>Ruta centro:</p>
-            <label><input type="checkbox" name="registro[]" id="centro_02" value="centro_02"><time>10:00</time> Plaça Catalunya</label>
-            <label><input type="checkbox" name="registro[]" id="centro_03" value="centro_03"><time>17:00</time> Rambla Catalunya</label>
+            <label><input type="checkbox" name="registro[]" id="centro_01" value="centro_01"><time>10:00</time> Plaça Catalunya</label>
+            <label><input type="checkbox" name="registro[]" id="centro_02" value="centro_02"><time>17:00</time> Rambla Catalunya</label>
+          </div>-->
+        </div> <!--#seleccion-ruta-->
+        <div id="seleccion-traslado" class="contenido-dia clearfix">
+          <h4>Traslados</h4>
+          <div>
+            <p>Aeropuerto T1:</p>
+            <label><input type="checkbox" name="registro[]" id="traslados_01" value="traslados_01"><time>10:00</time> Barcelona hasta Aeropuerto</label>
+            <label><input type="checkbox" name="registro[]" id="traslados_02" value="traslados_02"><time>12:00</time> Aeropuerto hasta Barcelona</label>
           </div>
-        </div> <!--#sabado-->
-        <div id="domingo" class="contenido-dia clearfix">
+          <div>
+            <p>Aeropuerto T2:</p>
+            <label><input type="checkbox" name="registro[]" id="traslados_03" value="traslados_03"><time>10:00</time> Barcelona hasta Aeropuerto</label>
+            <label><input type="checkbox" name="registro[]" id="traslados_04" value="traslados_04"><time>12:00</time> Aeropuerto hasta Barcelona</label>
+          </div>
+          <div>
+            <p>Cruceros - Moll de la Fusta:</p>
+            <label><input type="checkbox" name="registro[]" id="traslados_07" value="traslados_07"><time>10:00</time> Barcelona hasta zona cruceros</label>
+            <label><input type="checkbox" name="registro[]" id="traslados_08" value="traslados_08"><time>17:00</time> Zona cruceros hasta Barcelona</label>
+          </div>
+        </div> <!--#Traslados-->
+        <!--TODO aquí podría poner eventos o dias especiales.-->
+        <!--<div id="domingo" class="contenido-dia clearfix">
           <h4>Domingo</h4>
           <div>
             <p>Ruta a:</p>
@@ -204,7 +220,7 @@
             <label><input type="checkbox" name="registro[]" id="rutac_04" value="rutac_04"><time>14:00</time> sitio9</label>
             <label><input type="checkbox" name="registro[]" id="rutac_05" value="rutac_05"><time>17:00</time> sitio10</label>
           </div>
-        </div> <!--#domingo-->
+        </div>--> <!--#domingo-->
       </div><!--.caja-->
     </div> <!--#eventos-->
 

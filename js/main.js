@@ -30,9 +30,9 @@
 
     calcular.addEventListener('click', calcularPrecio);
 
-    dia_completo.addEventListener('blur', mostrarDias);
-    rutas.addEventListener('blur', mostrarDias);
-    traslados.addEventListener('blur', mostrarDias);
+    dia_completo.addEventListener('input', mostrarServicios);
+    rutas.addEventListener('input', mostrarServicios);
+    traslados.addEventListener('input', mostrarServicios);
 
 
     function  calcularPrecio(event) {
@@ -85,12 +85,54 @@
         /*botonRegistro.disabled = false;
         document.getElementById('total_pedido').value = totalPagar;*/
 
-
-
-
-
       }
     }
+
+    function mostrarServicios() {
+      /*console.log(dia_completo.value)
+      console.log(rutas.value)
+      console.log(traslados.value)*/
+      var serviciosDia = dia_completo.value,
+        serviciosTraslados = traslados.value,
+        serviciosRutas = rutas.value;
+
+      var serviciosElegidos = [];
+
+      if (serviciosDia > 0){
+        serviciosElegidos.push('seleccion-ruta', 'seleccion-traslado');
+        console.log(serviciosElegidos)
+      }
+      if (serviciosTraslados > 0){
+        serviciosElegidos.push('seleccion-traslado');
+        console.log(serviciosElegidos)
+      }
+      if (serviciosRutas > 0){
+        serviciosElegidos.push('seleccion-ruta');
+        console.log(serviciosElegidos)
+      }
+
+      for(var i = 0; i < serviciosElegidos.length; i++) {
+        document.getElementById(serviciosElegidos[i]).style.display = 'block';
+      }
+
+      if(serviciosElegidos.length == 0 ) {
+        var todosDias = document.getElementsByClassName('contenido-dia');
+        for(var i = 0; i < todosDias.length; i++) {
+          todosDias[i].style.display = 'none';
+        }
+      }
+      //FIX para ocultar uno de los dos, que se quedaba enganchado
+      if (serviciosElegidos.includes('seleccion-ruta') && !serviciosElegidos.includes('seleccion-traslado')){
+        var ocultar = document.getElementById('seleccion-traslado');
+        ocultar.style.display = 'none';
+      }
+      if (!serviciosElegidos.includes('seleccion-ruta') && serviciosElegidos.includes('seleccion-traslado')){
+        var ocultar = document.getElementById('seleccion-ruta');
+        ocultar.style.display = 'none';
+      }
+
+    }
+
 
   }); //DOM CONTENT LOADED
 })();
