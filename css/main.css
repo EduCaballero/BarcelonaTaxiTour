@@ -833,6 +833,14 @@ div.resumen input{
   color: #fe4918;
 }
 
+#error {
+  clear: both;
+  padding: 20px;
+  text-align: center;
+  color: #ff533a;
+  display: none;
+}
+
 
 
 
