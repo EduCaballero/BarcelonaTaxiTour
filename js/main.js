@@ -1,3 +1,41 @@
+var api = 'AIzaSyCDN4YMqg5TctNBSJfJJju41wNryzL_8Cs';
+
+/*@41.3947688,2.0787279,12z*///latitud y longitud bcn
+/*@41.3870154,2.1678584,17z plç Catalunya*/
+function initMap() {
+  var latLng = {
+    /*lat: 41.3947688, //barcelona
+    lng: 2.0787279*/
+    lat: 41.3870154, //plç Cat
+    lng: 2.1678584
+  }
+
+  var map = new google.maps.Map(document.getElementById('mapa'), {
+    'center': latLng, //center: {lat: -34.397, lng: 150.644},
+    'zoom': 12,
+    'mapTypeId': google.maps.MapTypeId.ROADMAP
+  });
+
+  var contenido = '<h2>BCN Taxi Tour</h2>'+
+    '<p>Tu servicio de Taxi en Barcelona</p>'+
+    '<p>¡No te arrepentirás!</p>';
+
+  var informacion = new google.maps.InfoWindow({
+    content: contenido
+  });
+
+  var marker = new google.maps.Marker({
+    position:latLng,
+    map: map,
+    title: 'BCN Taxi Tour'
+  });
+
+  marker.addListener('click', function(){
+    informacion.open(map, marker);
+  });
+
+}
+
 (function () {
   "use strict";
 
