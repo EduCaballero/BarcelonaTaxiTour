@@ -225,4 +225,16 @@ $(function () {
   $('.resumen-servicio li:nth-child(3) p').animateNumber({number: 3}, 600);
   $('.resumen-servicio li:nth-child(4) p').animateNumber({number: 9}, 1500);
 
+  //countdown
+  $('.cuenta-atras').countdown('2018/12/10 00:00:00', function (event) { /* cambiar - poner cuándo termina una oferta o una promoción*/
+    $('#dias').html(event.strftime('%D'));//strftime pasa a string el tiempo
+    $('#horas').html(event.strftime('%H'));
+    $('#minutos').html(event.strftime('%M'));
+    $('#segundos').html(event.strftime('%S'));
+  })
+
+
+
+
+
 });
