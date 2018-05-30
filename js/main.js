@@ -223,7 +223,11 @@ $(function () {
       $('.barra').removeClass('fixed');
       $('body').css({'margin-top':'0'+'px'});
     }
+  });
 
+  //menú responsive
+  $('.menu-movil').on('click', function () {
+    $('.navegacion-principal').slideToggle();//en lugar de utilizar hide y show, además da efecto chulo
   });
 
   //info rutas
