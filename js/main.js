@@ -205,6 +205,11 @@ function initMap() {
 })();
 
 $(function () {
+
+  //lettering plugin
+  $('.nombre-sitio').lettering();//esto aplica a cada una de las letras un span, para poder trabajar individualmente con ellas
+
+
   //info rutas
   $('.informacion-servicio .info-ruta:first').show();//para que sólo muestre uno
   $('.menu-informacion a:first').addClass('activo');//para que el selector por defecto cuando recarga la página esté activo

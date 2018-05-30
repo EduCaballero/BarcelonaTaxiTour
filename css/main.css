@@ -197,6 +197,60 @@ ul{
   float: right;
 }
 
+/****Lettering****/
+h1.nombre-sitio span{
+  position: relative;
+  text-shadow: 0 0 30px black;
+}
+@media only screen and (min-width: 992px){
+  .char1{
+    top: 0px; right: 0px;
+  }
+  .char2{
+    top: 0px; right: 0px;
+  }
+  .char3{
+    top: 10px; right: 10px;
+  }
+  .char4{/* */
+    top: 5px; right: 10px;
+  }
+  .char5{/*t*/
+    top: 15px; right: 10px;
+    color: black;
+  }
+  .char6{/*a*/
+    top: 5px; right: 10px;
+    color: yellow;
+  }
+  .char7{/*x*/
+    top: 20px; right: 10px;
+    color: black;
+  }
+  .char8{/*i*/
+    top: 0px; right: 10px;
+    color: yellow;
+  }
+  .char9{/* */
+    top: 10px; right: 20px;
+  }
+  .char10{/*t*/
+    top: 20px; right: 0px;
+  }
+  .char11{/*o*/
+    top: 10px; right: -5px;
+  }
+  .char12{/*u*/
+    top: 20px; right: 20px;
+  }
+  .char13{/*r*/
+    top: 20px; right: 20px;
+  }
+
+}
+
+
+
 /*header*/
 div.hero{
   background-image: url(../img/encabezado.jpg); /*cambiar*/
