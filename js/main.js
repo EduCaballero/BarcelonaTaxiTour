@@ -40,9 +40,9 @@ function initMap() {
   "use strict";
 
   var regalo=document.getElementById('regalo');
-
   document.addEventListener('DOMContentLoaded', function () {
     //console.log("empezamos");
+
     //Datos de usuario
     var nombre=document.getElementById('nombre');
     var apellido=document.getElementById('apellido');
@@ -66,16 +66,22 @@ function initMap() {
 
     //botonRegistro.disabled = true;
 
-    calcular.addEventListener('click', calcularPrecio);
+    if (document.getElementById('calcular')){ //quitar el peo de uncaught type error
 
-    dia_completo.addEventListener('input', mostrarServicios);
-    rutas.addEventListener('input', mostrarServicios);
-    traslados.addEventListener('input', mostrarServicios);
+      calcular.addEventListener('click', calcularPrecio);
 
-    nombre.addEventListener('blur', validarCampos);
-    apellido.addEventListener('blur', validarCampos);
-    email.addEventListener('blur', validarCampos);
-    email.addEventListener('blur', validarMail);
+      dia_completo.addEventListener('input', mostrarServicios);
+      rutas.addEventListener('input', mostrarServicios);
+      traslados.addEventListener('input', mostrarServicios);
+
+      nombre.addEventListener('blur', validarCampos);
+      apellido.addEventListener('blur', validarCampos);
+      email.addEventListener('blur', validarCampos);
+      email.addEventListener('blur', validarMail);
+
+    }
+
+
 
 
     function  calcularPrecio(event) {
