@@ -209,6 +209,22 @@ $(function () {
   //lettering plugin
   $('.nombre-sitio').lettering();//esto aplica a cada una de las letras un span, para poder trabajar individualmente con ellas
 
+  //fijar menú
+  var windowHeight = $(window).height();//altura de la ventana
+  var barraAltura = $('.barra').innerHeight();//altura barra a fijar
+
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    //console.log(scroll);
+    if (scroll>windowHeight){
+      $('.barra').addClass('fixed');
+      $('body').css({'margin-top':barraAltura+'px'});//para que el fijado sea suave y no de un salto feo
+    } else {
+      $('.barra').removeClass('fixed');
+      $('body').css({'margin-top':'0'+'px'});
+    }
+
+  });
 
   //info rutas
   $('.informacion-servicio .info-ruta:first').show();//para que sólo muestre uno
