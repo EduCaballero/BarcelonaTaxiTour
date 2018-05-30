@@ -218,4 +218,11 @@ $(function () {
     $(enlace).fadeIn(750);
     return false; //para que no de el salto ese de mierda, horrible
   });
+
+  //animaciones para los números
+  $('.resumen-servicio li:nth-child(1) p').animateNumber({number: 6}, 1200);
+  $('.resumen-servicio li:nth-child(2) p').animateNumber({number: 15}, 1200);
+  $('.resumen-servicio li:nth-child(3) p').animateNumber({number: 3}, 600);
+  $('.resumen-servicio li:nth-child(4) p').animateNumber({number: 9}, 1500);
+
 });
