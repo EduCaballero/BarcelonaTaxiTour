@@ -203,3 +203,19 @@ function initMap() {
 
   }); //DOM CONTENT LOADED
 })();
+
+$(function () {
+  //info rutas
+  $('.informacion-servicio .info-ruta:first').show();//para que sólo muestre uno
+  $('.menu-informacion a:first').addClass('activo');//para que el selector por defecto cuando recarga la página esté activo
+
+  $('.menu-informacion a').on('click', function () {
+    $('.menu-informacion a').removeClass('activo');//para que al clickar uno debajo, no se mantengan los otros también activos
+    $(this).addClass('activo');
+    $('.ocultar').hide();
+    var enlace = $(this).attr('href');
+    //console.log(enlace);
+    $(enlace).fadeIn(750);
+    return false; //para que no de el salto ese de mierda, horrible
+  });
+});

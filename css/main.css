@@ -388,8 +388,6 @@ div.informacion-servicio{
 }
 nav.menu-informacion{
   width: 100%;
-  border-bottom: 1px solid #fe4918;
-  padding-bottom: 10px;
 }
 @media only screen and (min-width: 768px){
   nav.menu-informacion{
@@ -404,6 +402,23 @@ nav.menu-informacion a{
   font-family: 'Oswald', sans-serif;
   margin-bottom: 10px;
   font-size: 1.2em;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fe4918;
+}
+nav.menu-informacion a.activo::after{
+  position: absolute;
+  content: '';
+  left: 0;/*de aquí*/
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;/*hasta aquí es para la posición horizontal de la flecha de activo*/
+  height: 20px;
+  width: 30px;
+  background-image: url("../img/info-flecha.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  bottom: -20px;
 }
 @media only screen and (min-width: 768px){
   nav.menu-informacion a{
@@ -414,6 +429,9 @@ nav.menu-informacion a i, div.detalle-servicio i{
   color: #fe4918;
   font-size: 1.6em;
   margin-right: 10px;
+}
+div.ocultar{
+  display: none;
 }
 
 /*detalle servicio*/
