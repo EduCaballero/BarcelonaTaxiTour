@@ -202,6 +202,21 @@ h1.nombre-sitio span{
   position: relative;
   text-shadow: 0 0 30px black;
 }
+
+/*que e mantenga el color cuando responsive tamaño<992px*/
+.char5{/*t*/
+  color: black;
+}
+.char6{/*a*/
+  color: yellow;
+}
+.char7{/*x*/
+  color: black;
+}
+.char8{/*i*/
+  color: yellow;
+}
+
 @media only screen and (min-width: 992px){
   .char1{
     top: 0px; right: 0px;

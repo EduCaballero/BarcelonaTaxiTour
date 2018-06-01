@@ -250,11 +250,20 @@ $(function () {
     return false; //para que no de el salto ese de mierda, horrible
   });
 
-  //animaciones para los números
-  $('.resumen-servicio li:nth-child(1) p').animateNumber({number: 6}, 1200);
-  $('.resumen-servicio li:nth-child(2) p').animateNumber({number: 15}, 1200);
-  $('.resumen-servicio li:nth-child(3) p').animateNumber({number: 3}, 600);
-  $('.resumen-servicio li:nth-child(4) p').animateNumber({number: 9}, 1500);
+  //animaciones para los números //añado waypoint para animación cuando llegas a ellos
+  var resumenLista = jQuery('.resumen-servicio');//añadir un booleano si quiero que sólo se haga la animación una vez
+  if (resumenLista.length>0){
+    $('.resumen-servicio').waypoint(function () {
+      $('.resumen-servicio li:nth-child(1) p').animateNumber({number: 6}, 1200);
+      $('.resumen-servicio li:nth-child(2) p').animateNumber({number: 15}, 1200);
+      $('.resumen-servicio li:nth-child(3) p').animateNumber({number: 3}, 600);
+      $('.resumen-servicio li:nth-child(4) p').animateNumber({number: 9}, 1500);
+    }, {
+      offset: '60%' //para que empeice la animación, siempre, cuando empiezas a verlo, no cuando está a punto de salir de la vista
+    });
+  }
+
+
 
   //countdown
   $('.cuenta-atras').countdown('2018/12/10 00:00:00', function (event) { /* cambiar - poner cuándo termina una oferta o una promoción*/
