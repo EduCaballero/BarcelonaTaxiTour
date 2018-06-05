@@ -1,72 +1,6 @@
-<!doctype html>
-<html class="no-js" lang="">
+<?php include_once 'includes/templates/header.php'; ?>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet"><!--traigo algunas fuentes de google fonts-->
-
-</head>
-
-<body>
-<!--[if lte IE 9]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-<![endif]-->
-
-<!-- Add your site or application content here -->
-<header class="site-header">
-  <div class="hero">
-    <div class="contenido-header">
-      <nav class="redes-sociales">
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      </nav>
-      <div class="informacion-ruta">
-        <div class="clearfix">
-          <p class="fecha"><i class="fa fa-calendar" aria-hidden="true"></i> 10-12 Dic</p>
-          <p class="ciudad"><i class="fa fa-map-marker" aria-hidden="true"></i> Barcelona, CAT</p>
-        </div>
-        <h1 class="nombre-sitio">BCN Taxi Tour</h1>
-        <p class="slogan">La mejor ruta de <span> Barcelona</span></p>
-      </div> <!--.informacion-ruta-->
-    </div>
-  </div><!--.hero-->
-</header>
-
-<div class="barra"> <!--barra de menú debajo-->
-  <div class="contenedor clearfix">
-    <div class="logo">
-      <img src="img/logo.svg" alt="logo BCN taxi tour"><!-- cambiar -->
-    </div>
-    <div class="menu-movil">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav class="navegacion-principal clearfix">
-      <a href="#">Ruta/evento</a><!-- cambiar -->
-      <a href="#">Calendario</a>
-      <a href="#">Taxistas/taxis</a>
-      <a href="registro.html">Reservas</a>
-    </nav>
-  </div>
-</div><!--.barra de menú debajo-->
-
-<section class="seccion contenedor">
+  <section class="seccion contenedor">
   <h2>Registro de usuarios</h2>
   <form id="registro" class="registro" action="" method="post">
     <div id="datos_usuario" class="registro caja clearfix">
@@ -292,24 +226,4 @@
   <p class="copyright">Todos los derechos reservados - BCN Taxi Tour 2018</p>
 </footer>
 
-
-
-<script src="js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/jquery.countdown.min.js"></script>
-<script src="js/jquery.lettering.js"></script>
-
-
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-  ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-</body>
-
-</html>
+<?php include_once 'includes/templates/footer.php'; ?>

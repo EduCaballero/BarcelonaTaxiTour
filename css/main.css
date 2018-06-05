@@ -868,7 +868,7 @@ div.campo{
   }
 }
 div.paquetes .tabla-precio:hover{
-  transform: none;/*quito las animaciones en registro.html*/
+  transform: none;/*quito las animaciones en registro.php*/
   box-shadow: none;
 }
 div.paquetes .tabla-precio input{
