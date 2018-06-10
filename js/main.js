@@ -215,7 +215,7 @@ $(function () {
   //lettering plugin
   $('.nombre-sitio').lettering();//esto aplica a cada una de las letras un span, para poder trabajar individualmente con ellas
 
-  // Agregar clase a Menú -- la rallita debajo que indica dónde estamos
+  // Agregar clase a Menú -- la rayita debajo que indica dónde estamos
   $('body.ruta .navegacion-principal a:contains("Rutas")').addClass('activo');
   $('body.calendario .navegacion-principal a:contains("Calendario")').addClass('activo');
   $('body.taxis .navegacion-principal a:contains("Taxistas/taxis")').addClass('activo');
