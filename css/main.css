@@ -679,7 +679,7 @@ div.mapa{
   background-color: green;
 }
 
-/*testimoniales*/
+/*bio*/
 div.biografias{
   padding-bottom: 20px;
 }
@@ -825,9 +825,9 @@ p.copyright{
 
 
 /******internas******/
-/*rutas/eventos*/
-body.ruta-evento .navegacion-principal .activo{
-  border-bottom: 2px solid #fe4918;
+/*rutas y otros*/
+.navegacion-principal .activo{
+  border-bottom: 2px solid #fe4918; /*la rallita debajo que indica dónde estamos*/
 }
 div.galeria a{
   display: inline-block;

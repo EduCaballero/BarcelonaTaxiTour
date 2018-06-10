@@ -33,7 +33,7 @@
 
 </head>
 
-<body>
+<body class="<?php echo $pagina; ?>"> <!--para saber en qué página estamos y resaltarla-->
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -74,7 +74,7 @@
         <span></span>
       </div>
       <nav class="navegacion-principal clearfix">
-        <a href="ruta.php">Ruta/evento</a><!-- cambiar -->
+        <a href="ruta.php">Rutas</a><!-- cambiar -->
         <a href="calendario.php">Calendario</a>
         <a href="taxis.php">Taxistas/taxis</a>
         <a href="registro.php">Reservas</a>
