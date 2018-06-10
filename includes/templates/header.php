@@ -63,7 +63,7 @@
       <nav class="navegacion-principal clearfix">
         <a href="ruta.php">Ruta/evento</a><!-- cambiar -->
         <a href="calendario.php">Calendario</a>
-        <a href="#">Taxistas/taxis</a>
+        <a href="taxis.php">Taxistas/taxis</a>
         <a href="registro.php">Reservas</a>
       </nav>
     </div>
