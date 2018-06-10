@@ -990,6 +990,12 @@ div.dia i {
   font-size: 1.6em;
 }
 
+/**** Colorbox **/
+div.cboxElement { /*nombre que colorbox da automáticamente*/
+  padding: 30px!important;
+  text-align: center;
+} /*cambiar responsive*/
+
 
 
 

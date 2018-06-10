@@ -273,6 +273,10 @@ $(function () {
     $('#segundos').html(event.strftime('%S'));
   })
 
+  // Colorbox - taxis/taxistas. Info cuando haces click
+  $('.conductor-info').colorbox({inline:true, width:"50%"});
+  $('.boton_newsletter').colorbox({inline:true, width:"50%"});
+
 
 
 

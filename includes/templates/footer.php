@@ -37,7 +37,17 @@
 <script src="js/jquery.countdown.min.js"></script>
 <script src="js/jquery.lettering.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
-<script src="js/lightbox.js"></script>
+
+<?php //para qeu cargue uno u otro y no haya conflictos
+$archivo = basename($_SERVER['PHP_SELF']);//esto devuelve el nombre del archivo actual
+$pagina = str_replace(".php", "", $archivo);//quitamos el .php para comparar debajo (un poco redundante pero facilita
+if($pagina == 'taxis' || $pagina == 'index'){
+  echo '<script src="js/jquery.colorbox-min.js"></script>';
+} else if($pagina == 'ruta') {
+  echo '<script src="js/lightbox.js"></script>';
+}
+?>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDN4YMqg5TctNBSJfJJju41wNryzL_8Cs&callback=initMap"
         async defer></script>
 

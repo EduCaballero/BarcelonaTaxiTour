@@ -23,11 +23,11 @@ try {
           </div> <!-- END .invitado -->
         </li>
 
-        <div style="display:none;"> <!--ocultar-->
+        <div style="display:none;"> <!--ocultar, al ser sólo una propiedad lo hago aquí para que sea más fácil de identificar-->
 
           <div class="conductor-info" id="conductor<?php echo $taxis['taxi_id']; ?>">
-            <h2><?php echo $taxis['taxi_invitado'] ?></h2>
-            <img src="img/<?php echo $taxis['url_imagen'] ?>" alt="">
+            <h2><?php echo $taxis['nombre_taxi'] ?></h2>
+            <img src="img/<?php echo $taxis['url_imagen'] ?>" alt=""> <!-- cambiar - nombre url -->
             <p><?php echo $taxis['descripcion'] ?></p>
           </div>
 

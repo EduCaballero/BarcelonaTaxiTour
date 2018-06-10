@@ -15,7 +15,20 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/lightbox.css">
+
+  <?php //para qeu cargue uno u otro y no haya conflictos
+  $archivo = basename($_SERVER['PHP_SELF']);//esto devuelve el nombre del archivo actual
+  $pagina = str_replace(".php", "", $archivo);//quitamos el .php para comparar debajo (un poco redundante pero facilita
+  if($pagina == 'taxis' || $pagina == 'index'){
+    echo '<link rel="stylesheet" href="css/colorbox.css">';
+  } else if($pagina == 'ruta') {
+    echo '<link rel="stylesheet" href="css/lightbox.css">';
+  }
+  ?>
+
+  <!--<link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/colorbox.css">-->
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet"><!--traigo algunas fuentes de google fonts-->
 
 </head>

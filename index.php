@@ -78,47 +78,7 @@
   </section><!-- .informacion -->
 
 
-  <section class="conductores contenedor seccion">
-    <h2>Nuestros conductores/Taxis</h2><!-- cambiar /se puede poner conductores o coches, por si el cliente quiere escoger-->
-    <ul class="lista-conductores clearfix">
-      <li>
-        <div class="conductor">
-          <img src="img/conductor1.jpg" alt="imagen conductor">
-          <p>Nombre Apellido</p><!--cambiar-->
-        </div>
-      </li>
-      <li>
-        <div class="conductor">
-          <img src="img/conductor2.jpg" alt="imagen conductor">
-          <p>Nombre Apellido</p><!--cambiar-->
-        </div>
-      </li>
-      <li>
-        <div class="conductor">
-          <img src="img/conductor3.jpg" alt="imagen conductor">
-          <p>Nombre Apellido</p><!--cambiar-->
-        </div>
-      </li>
-      <li>
-        <div class="conductor">
-          <img src="img/conductor4.jpg" alt="imagen conductor">
-          <p>Nombre Apellido</p><!--cambiar-->
-        </div>
-      </li>
-      <li>
-        <div class="conductor">
-          <img src="img/conductor5.jpg" alt="imagen conductor">
-          <p>Nombre Apellido</p><!--cambiar-->
-        </div>
-      </li>
-      <li>
-        <div class="conductor">
-          <img src="img/conductor6.jpg" alt="imagen conductor">
-          <p>Nombre Apellido</p><!--cambiar-->
-        </div>
-      </li>
-    </ul>
-  </section>
+<?php include_once 'includes/templates/taxistas.php'; ?>
 
   <div class="contador parallax">
     <div class="contenedor">
