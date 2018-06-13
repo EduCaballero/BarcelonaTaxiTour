@@ -64,7 +64,7 @@ function initMap() {
     var sagrada =document.getElementById('entrada_sagrada');
     var guell = document.getElementById('entrada_guell');
 
-    //botonRegistro.disabled = true;
+    botonRegistro.disabled = true;
 
     if (document.getElementById('calcular')){ //quitar el peo de uncaught type error
 
@@ -103,7 +103,7 @@ function initMap() {
         console.log("servicios traslado: " + serviciosTraslados);
         console.log("servicios rutas: " + serviciosRutas);*/
 
-        var totalPagar = (serviciosDia * 200) + (serviciosTraslados * 30) + (serviciosRutas * 50) + ((entradasSagrada * 12) * .93) + (entradasGuell * 10);
+        var totalPagar = (serviciosDia * 200) + (serviciosTraslados * 30) + (serviciosRutas * 50) + ((entradasSagrada * 12) * .93) + (entradasGuell * 10); //servicio * precio *.descuento
         //console.log("Total: " + totalPagar)
 
         var listadoProductos = [];
@@ -129,10 +129,10 @@ function initMap() {
           lista_productos.innerHTML += listadoProductos[i] + '<br/>';//a cada vuelta lo saca
         }
 
-        suma.innerHTML = "$ " + totalPagar.toFixed(2);//IMPORTANTíSIMO, recortar decimales con esto o la pasarela de pago da error si hay más decimales
+        suma.innerHTML = "€ " + totalPagar.toFixed(2);//IMPORTANTíSIMO, recortar decimales con esto o la pasarela de pago da error si hay más decimales
 
-        /*botonRegistro.disabled = false;
-        document.getElementById('total_pedido').value = totalPagar;*/
+        botonRegistro.disabled = false;
+        document.getElementById('total_pedido').value = totalPagar;
 
       }
     }

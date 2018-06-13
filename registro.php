@@ -2,7 +2,7 @@
 
   <section class="seccion contenedor">
   <h2>Registro de usuarios</h2>
-  <form id="registro" class="registro" action="" method="post">
+  <form id="registro" class="registro" action="validar_registro.php" method="post">
     <div id="datos_usuario" class="registro caja clearfix">
       <div class="campo">
         <label for="nombre">Nombre:</label>
@@ -33,7 +33,7 @@
             </ul>
             <div class="orden">
               <label for="dia_completo">Contratar:</label>
-              <input type="number" min="0" id="dia_completo" size="3" placeholder="0">
+              <input type="number" min="0" id="dia_completo" size="3" name="pases[]" placeholder="0">
             </div>
           </div>
         </li>
@@ -48,7 +48,7 @@
             </ul>
             <div class="orden">
               <label for="traslados">Traslados:</label>
-              <input type="number" min="0" id="traslados" size="3" placeholder="0">
+              <input type="number" min="0" id="traslados" size="3" name="pases[]" placeholder="0">
             </div>
           </div>
         </li>
@@ -63,7 +63,7 @@
             </ul>
             <div class="orden">
               <label for="rutas">Rutas:</label>
-              <input type="number" min="0" id="rutas" size="3" placeholder="0">
+              <input type="number" min="0" id="rutas" size="3" name="pases[]" placeholder="0">
             </div>
           </div>
         </li>
@@ -164,19 +164,19 @@
         <div class="extras">
           <div class="orden">
             <label for="entrada_sagrada">Entrada a la Sagrada Familia 12€ <small>(promocion 7% descuento)</small></label>
-            <input type="number" min="0" id="entrada_sagrada" size="3" placeholder="0">
+            <input type="number" min="0" id="entrada_sagrada" name="pedido_sagrada" size="3" placeholder="0">
           </div><!--.orden-->
           <div class="orden">
             <label for="entrada_guell">Entrada al Parc Güell 10€ <small>(Recinto)</small></label>
-            <input type="number" min="0" id="entrada_guell" size="3" placeholder="0">
+            <input type="number" min="0" id="entrada_guell" name="pedido_guell" size="3" placeholder="0">
           </div><!--.orden-->
           <div class="orden">
             <label for="regalo">Selecciona un regalo</label><br>
-            <select id="regalo" required>
+            <select id="regalo" name="regalo" required>
               <option value="">- Seleccione un regalo --</option>
-              <option value="guia_bcn">Guia de Barcelona</option>
-              <option value="mapa_bcn">Mapa de Barcelona</option>
-              <option value="wifi">Wifi Gratis</option>
+              <option value="2">Guia de Barcelona</option>
+              <option value="1">Mapa de Barcelona</option>
+              <option value="3">Wifi Gratis</option>
             </select>
           </div><!--.orden-->
           <input type="button" id="calcular" class="button" value="calcular">
@@ -190,40 +190,13 @@
           <div id="suma-total">
 
           </div>
-          <input id="btnRegistro" type="submit" class="button" value="Pagar">
+          <input type="hidden" name="total_pedido" id="total_pedido">
+          <input id="btnRegistro" type="submit" name="submit" class="button" value="Pagar">
         </div><!--.total-->
       </div><!--.caja-->
     </div><!--.resumen-->
 
   </form>
 </section>
-
-<footer class="site-footer">
-  <div class="contenedor clearfix">
-    <div class="footer-informacion">
-      <h3>Sobre <span>BCN Taxi Tour</span></h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget tempor libero. Praesent ut ullamcorper nisl. Morbi fringilla volutpat felis in mattis. Donec egestas augue risus, in mollis dui dictum eget.</p>
-    </div>
-    <div class="ultimos-tweets">
-      <h3>Últimos <span>tweets</span></h3>
-      <ul>
-        <li>ojhdfk jhdswfhwio edh onoiwdhfoi nuoifgh nwofh uowh hweofghn jlkhusdoih fjklshdfin jwhf jlnbdoefh ljndsif hwlkjef whfh</li>
-        <li>ojhdfk jhdswfhwio edh onoiwdhfoi nuoifgh nwofh uowh hweofghn jlkhusdoih fjklshdfin jwhf jlnbdoefh ljndsif hwlkjef whfh</li>
-        <li>ojhdfk jhdswfhwio edh onoiwdhfoi nuoifgh nwofh uowh hweofghn jlkhusdoih fjklshdfin jwhf jlnbdoefh ljndsif hwlkjef whfh</li>
-      </ul>
-    </div>
-    <div class="menu">
-      <h3>Redes <span>sociales</span></h3>
-      <nav class="redes-sociales">
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      </nav>
-    </div>
-  </div>
-  <p class="copyright">Todos los derechos reservados - BCN Taxi Tour 2018</p>
-</footer>
 
 <?php include_once 'includes/templates/footer.php'; ?>
