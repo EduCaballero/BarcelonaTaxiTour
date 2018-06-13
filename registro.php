@@ -2,7 +2,7 @@
 
   <section class="seccion contenedor">
   <h2>Registro de usuarios</h2>
-  <form id="registro" class="registro" action="validar_registro.php" method="post">
+  <form id="registro" class="registro" action="pagar.php" method="post">
     <div id="datos_usuario" class="registro caja clearfix">
       <div class="campo">
         <label for="nombre">Nombre:</label>
@@ -33,7 +33,8 @@
             </ul>
             <div class="orden">
               <label for="dia_completo">Contratar:</label>
-              <input type="number" min="0" id="dia_completo" size="3" name="pases[]" placeholder="0">
+              <input type="number" min="0" id="dia_completo" size="3" name="pases[un_dia][cantidad]" placeholder="0">
+              <input type="hidden" value="200" name="pases[un_dia][precio]">
             </div>
           </div>
         </li>
@@ -48,7 +49,8 @@
             </ul>
             <div class="orden">
               <label for="traslados">Traslados:</label>
-              <input type="number" min="0" id="traslados" size="3" name="pases[]" placeholder="0">
+              <input type="number" min="0" id="traslados" size="3" name="pases[traslados][cantidad]" placeholder="0">
+              <input type="hidden" value="30" name="pases[traslados][precio]">
             </div>
           </div>
         </li>
@@ -63,7 +65,8 @@
             </ul>
             <div class="orden">
               <label for="rutas">Rutas:</label>
-              <input type="number" min="0" id="rutas" size="3" name="pases[]" placeholder="0">
+              <input type="number" min="0" id="rutas" size="3" name="pases[rutas][cantidad]" placeholder="0">
+              <input type="hidden" value="200" name="pases[rutas][precio]">
             </div>
           </div>
         </li>
@@ -164,11 +167,13 @@
         <div class="extras">
           <div class="orden">
             <label for="entrada_sagrada">Entrada a la Sagrada Familia 12€ <small>(promocion 7% descuento)</small></label>
-            <input type="number" min="0" id="entrada_sagrada" name="pedido_sagrada" size="3" placeholder="0">
+            <input type="number" min="0" id="entrada_sagrada" name="pedido_extra[pedido_sagrada][cantidad]" size="3" placeholder="0">
+            <input type="hidden" value="12" name="pedido_extra[pedido_sagrada][precio]">
           </div><!--.orden-->
           <div class="orden">
             <label for="entrada_guell">Entrada al Parc Güell 10€ <small>(Recinto)</small></label>
-            <input type="number" min="0" id="entrada_guell" name="pedido_guell" size="3" placeholder="0">
+            <input type="number" min="0" id="entrada_guell" name="pedido_extra[pedido_guell][cantidad]" size="3" placeholder="0">
+            <input type="hidden" value="10" name="pedido_extra[pedido_guell][precio]">
           </div><!--.orden-->
           <div class="orden">
             <label for="regalo">Selecciona un regalo</label><br>

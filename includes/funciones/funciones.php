@@ -6,8 +6,8 @@ function productos_json(&$pases, &$entrada_sagrada = 0, &$entrada_guell = 0)
   $dias = array(0 => 'un_dia', 1 => 'pase_traslado', 2 => 'pase_rutas');
 
   unset($pases['un_dia']['precio']);
-  unset($pases['completo']['precio']);
-  unset($pases['2dias']['precio']);
+  unset($pases['traslados']['precio']);
+  unset($pases['rutas']['precio']);
 
   $total_pases = array_combine($dias, $pases); //para combinar los arrays de arriba y hacerlos como "asociativos", es decir, que la key sea un_dia, pase_traslado y pase_ruta en lugar de 0, 1 y 2
   //$json = array();
@@ -42,10 +42,10 @@ function formatear_pedido($articulos)
     $pedido .= 'Pase(s) 1 día: ' . $articulos['un_dia'] . "<br/>";
   endif;
   if (array_key_exists('pase_rutas', $articulos)):
-    $pedido .= 'Pase(s) 2 día: ' . $articulos['pase_rutas'] . "<br/>";
+    $pedido .= 'Pase(s) rutas: ' . $articulos['pase_rutas'] . "<br/>";
   endif;
   if (array_key_exists('pase_traslado', $articulos)):
-    $pedido .= 'Pase(s) Completos: ' . $articulos['pase_traslado'] . "<br/>";
+    $pedido .= 'Pase(s) traslados: ' . $articulos['pase_traslado'] . "<br/>";
   endif;
   if (array_key_exists('entrada_sagrada', $articulos)):
     $pedido .= 'Entrada Sagrada Familia: ' . $articulos['entrada_sagrada'] . "<br/>";
@@ -61,7 +61,7 @@ function eventos_json(&$eventos)
 {
   $eventos_json = array();
   foreach ($eventos as $evento):
-    $eventos_json['servicios'][] = $evento;
+    $eventos_json['eventos'][] = $evento;
   endforeach;
 
   return json_encode($eventos_json);
@@ -72,7 +72,7 @@ function formatear_eventos_a_sql($eventos)
   $eventos = json_decode($eventos, true);
   $sql = "SELECT `nombre_servicio` FROM servicios WHERE clave = 'a' ";
 
-  foreach ($eventos['servicios'] as $evento):
+  foreach ($eventos['eventos'] as $evento):
     $sql .= " OR clave = '{$evento}'";
   endforeach;
 
