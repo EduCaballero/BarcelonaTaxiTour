@@ -266,7 +266,7 @@
   <div class="contenido contenedor">
     <p>Regístrate a nuestra newsletter:</p>
     <h3>BCN Taxi Tour</h3>
-    <a href="#" class="button transparente">Registrarse</a>
+    <a href="#mc_embed_signup" class="boton_newsletter button transparente">Registrarse</a>
   </div>
 </div><!--.newsletter-->
 
