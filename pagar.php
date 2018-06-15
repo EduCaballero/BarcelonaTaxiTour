@@ -34,8 +34,8 @@ if (isset($_POST['submit'])):
   $precioGuell = $_POST['pedido_extra']['pedido_guell']['precio'];
   include_once 'includes/funciones/funciones.php';
   $pedido = productos_json($pases, $entrada_sagrada, $entrada_guell);
-  $eventos = $_POST['registro'];
-  $registro = eventos_json($eventos);
+  $servicios = $_POST['registro'];
+  $registro = servicios_json($servicios);
   $pagado = 0;
 
   /*echo "<pre>";
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])):
     $ID_registro = $stmt->insert_id;//para usarlo debajo, en paypal, en el amount
     $stmt->close();
     $conn->close();
-    //header('Location: validar_registro.php?exitoso=1');
+    //header('Location: validar_registro.php?exito=1');
   } catch (Exception $e) {
     $error = $e->getMessage();
   }

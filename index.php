@@ -271,7 +271,7 @@
 </div><!--.newsletter-->
 
 <section class="seccion">
-  <h2>Próximo evento en Barcelona:</h2>
+  <h2>Próximo servicios en Barcelona:</h2>
   <div class="cuenta-atras contenedor">
     <ul class="clearfix">
       <li><p id="dias" class="numero"></p> días</li>

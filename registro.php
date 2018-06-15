@@ -73,7 +73,7 @@
       </ul>
     </div><!--.paquetes-->
 
-    <div id="eventos" class="eventos clearfix">
+    <div id="servicios" class="servicios clearfix">
       <h3>Selecciona entre los servicios disponibles</h3>
       <div class="caja">
         <div id="seleccion-ruta" class="contenido-dia clearfix">
@@ -135,7 +135,7 @@
             <label><input type="checkbox" name="registro[]" id="traslados_08" value="traslados_08"><time>17:00</time> Zona cruceros hasta Barcelona</label>
           </div>
         </div> <!--#Traslados-->
-        <!--TODO aquí podría poner eventos o dias especiales.-->
+        <!--TODO aquí podría poner servicios o dias especiales.-->
         <!--<div id="domingo" class="contenido-dia clearfix">
           <h4>Domingo</h4>
           <div>
@@ -159,7 +159,7 @@
           </div>
         </div>--> <!--#domingo-->
       </div><!--.caja-->
-    </div> <!--#eventos-->
+    </div> <!--#servicios-->
 
     <div id="resumen" class="resumen">
       <h3>Pago y Extras</h3>
@@ -193,6 +193,7 @@
           </div>
           <p>Total:</p>
           <div id="suma-total">
+
 
           </div>
           <input type="hidden" name="total_pedido" id="total_pedido">

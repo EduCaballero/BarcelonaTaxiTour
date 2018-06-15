@@ -15,8 +15,8 @@ if (isset($_POST['submit'])):
   $entrada_guell = $_POST['pedido_guell'];
   include_once 'includes/funciones/funciones.php';
   $pedido = productos_json($pases, $entrada_sagrada, $entrada_guell);
-  $eventos = $_POST['registro'];//esto son las rutas actualmente, pero al ser ampliable y no ser sólo servicios lo dejo como eventos
-  $registro = eventos_json($eventos);
+  $servicios = $_POST['registro'];//esto son las rutas actualmente, pero al ser ampliable y no ser sólo servicios lo dejo como servicios
+  $registro = servicios_json($servicios);
   $pagado = 0;
 
   try {

@@ -3,10 +3,10 @@
 
 function productos_json(&$pases, &$entrada_sagrada = 0, &$entrada_guell = 0)
 { //paso por referencia, para que los datos sigan existiendo. pase siempre habrá uno, pero en los otros puede que no así que valor por defecto 0
-  $dias = array(0 => 'un_dia', 1 => 'pase_traslado', 2 => 'pase_rutas');
+  $dias = array(0 => 'un_dia', 1 => 'traslado', 2 => 'rutas');
 
   unset($pases['un_dia']['precio']);
-  unset($pases['traslados']['precio']);
+  unset($pases['traslado']['precio']);
   unset($pases['rutas']['precio']);
 
   $total_pases = array_combine($dias, $pases); //para combinar los arrays de arriba y hacerlos como "asociativos", es decir, que la key sea un_dia, pase_traslado y pase_ruta en lugar de 0, 1 y 2
@@ -41,11 +41,11 @@ function formatear_pedido($articulos)
   if (array_key_exists('un_dia', $articulos)):
     $pedido .= 'Pase(s) 1 día: ' . $articulos['un_dia'] . "<br/>";
   endif;
-  if (array_key_exists('pase_rutas', $articulos)):
-    $pedido .= 'Pase(s) rutas: ' . $articulos['pase_rutas'] . "<br/>";
+  if (array_key_exists('rutas', $articulos)):
+    $pedido .= 'Pase(s) rutas: ' . $articulos['rutas'] . "<br/>";
   endif;
-  if (array_key_exists('pase_traslado', $articulos)):
-    $pedido .= 'Pase(s) traslados: ' . $articulos['pase_traslado'] . "<br/>";
+  if (array_key_exists('traslado', $articulos)):
+    $pedido .= 'Pase(s) traslados: ' . $articulos['traslado'] . "<br/>";
   endif;
   if (array_key_exists('entrada_sagrada', $articulos)):
     $pedido .= 'Entrada Sagrada Familia: ' . $articulos['entrada_sagrada'] . "<br/>";
@@ -57,23 +57,23 @@ function formatear_pedido($articulos)
   return $pedido;
 }
 
-function eventos_json(&$eventos)
+function servicios_json(&$servicios)
 {
-  $eventos_json = array();
-  foreach ($eventos as $evento):
-    $eventos_json['eventos'][] = $evento;
+  $servicios_json = array();
+  foreach ($servicios as $servicios):
+    $servicios_json['servicios'][] = $servicios;
   endforeach;
 
-  return json_encode($eventos_json);
+  return json_encode($servicios_json);
 }
 
-function formatear_eventos_a_sql($eventos)
+function formatear_servicios_a_sql($servicios)
 {
-  $eventos = json_decode($eventos, true);
+  $servicios = json_decode($servicios, true);
   $sql = "SELECT `nombre_servicio` FROM servicios WHERE clave = 'a' ";
 
-  foreach ($eventos['eventos'] as $evento):
-    $sql .= " OR clave = '{$evento}'";
+  foreach ($servicios['servicios'] as $servicios):
+    $sql .= " OR clave = '{$servicios}'";
   endforeach;
 
   return $sql;

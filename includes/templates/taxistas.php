@@ -20,7 +20,7 @@ try {
               <img src="img/taxis/<?php echo $taxis['url_imagen'] ?>" alt="Imagen taxi">
               <p><?php echo $taxis['nombre_taxi'] . " " . $taxis['apellido_taxi'] ?></p>
             </a>
-          </div> <!-- END .invitado -->
+          </div> <!-- END .taxi -->
         </li>
 
         <div style="display:none;"> <!--ocultar, al ser sólo una propiedad lo hago aquí para que sea más fácil de identificar-->
